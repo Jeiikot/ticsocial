@@ -1,0 +1,13 @@
+{% block content %}
+
+<h1>Delete Person</h1>
+
+<p>Are you sure you want to delete the person: {{ person }}?</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes, delete.">
+    <input type="submit" onclick="window.location='{% url 'person:index' %}' ; return false;" value="Cancel">
+</form>
+
+{% endblock %}

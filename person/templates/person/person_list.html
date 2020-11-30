@@ -1,0 +1,27 @@
+{% block content %}
+    <h1>Person List</h1>
+    {% if person_list %}
+        <ul>
+            {% for person in person_list %}
+              <li>
+                  {{ person.name }} ({{ person.last_name }})
+                  (<a href="{% url 'person:update' person.id %}">Update</a> |
+                    <a href="{% url 'person:delete' person.id %}">Delete</a>) <br/>
+              </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no persons in the list.</p>
+    {% endif %}
+
+
+    <p>
+        The number of person is: {{ person_count }}
+    </p>
+
+    <p>
+        <a href="{% url 'person:create' %}">Add Person</a>
+    </p>
+
+
+{% endblock %}
