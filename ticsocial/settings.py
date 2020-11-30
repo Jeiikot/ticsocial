@@ -25,7 +25,7 @@ SECRET_KEY = 'rvdnft(@8bh$5qv-*p3+o19h23^vk@vuksw$vrv#u^40c_*iaj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # APP
+    'persona'
 ]
 
 MIDDLEWARE = [
